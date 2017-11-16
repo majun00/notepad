@@ -26,7 +26,7 @@ const mutation={
 		state.notes.push(newNote);
 		state.activeNote=newNote;
 	},
-	//修改笔记?
+	//修改笔记
 	EDIT_NOTE(state,note){
 		state.activeNote=note;
 		for (var i = 0; i < state.notes.length; i++) {

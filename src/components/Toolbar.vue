@@ -1,15 +1,15 @@
 <template>
   <div id="toolbar">
   	<i class="glyphicon logo"><img src="../assets/logo.png" width="30" height="30"></i>
-  	<i class="glyphicon glyphicon-plus"></i>
-  	<i class="glyphicon glyphicon-star"></i>
-  	<i class="glyphicon glyphicon-remove"></i>
+  	<i @click="newNote" class="glyphicon glyphicon-plus"></i>
+  	<i @click="toggleFavorite" :class="{starred: activeNote.favorite}" class="glyphicon glyphicon-star"></i>
+  	<i @click="deletNote" class="glyphicon glyphicon-remove"></i>
   </div>
 </template>
 
 <script>
-import {newNote,deletNote,toggleFavorite} from '../vuex/actions'
 import {activeNote} from '../vuex/getters'
+import {newNote,deletNote,toggleFavorite} from '../vuex/actions'
 
 export default {
   vuex:{

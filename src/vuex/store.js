@@ -45,7 +45,7 @@ const mutation={
 	TOGGLE_FAVORITE(state){
 		state.activeNote.favorite=!state.activeNote.favorite;
 	},
-	//切换显示类型?
+	//切换显示类型
 	SET_SHOW_ALL(state,show){
 		state.show=show;
 		if(show==='favorite'){

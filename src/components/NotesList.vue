@@ -47,6 +47,11 @@ export default {
   	actions:{
   		updateShow,
   		updateActiveNote
+  	},
+  	methods: {
+  	  toggleShow(show) {
+  	    this.updateShow(show);
+  	  }
   	}
   }
 }
